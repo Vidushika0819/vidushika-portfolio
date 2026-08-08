@@ -1,612 +1,1465 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Vidushika Madhushani - IT Undergraduate | Aspiring Software Developer | DevOps Enthusiast"
-    />
-    <title>Vidushika Madhushani | Portfolio</title>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-
-  <body>
-    <!-- ===== NAVBAR ===== -->
-    <nav class="navbar" id="navbar">
-      <div class="nav-container">
-        <a class="nav-logo" href="#home" aria-label="Go to Home">
-          <span class="logo-text">VM</span>
-        </a>
-
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-        </button>
-
-        <ul class="nav-links" id="nav-links">
-          <li><a class="nav-link active" href="#home">Home</a></li>
-          <li><a class="nav-link" href="#about">About</a></li>
-          <li><a class="nav-link" href="#skills">Skills</a></li>
-          <li><a class="nav-link" href="#projects">Projects</a></li>
-          <li><a class="nav-link" href="#education">Education</a></li>
-          <li><a class="nav-link" href="#experience">Experience</a></li>
-          <li><a class="nav-link" href="#leadership">Leadership</a></li>
-          <li><a class="nav-link" href="#contact">Contact</a></li>
-          <li>
-            <a class="nav-link resume-btn" href="assets/resume.pdf" target="_blank" rel="noopener">
-              <i class="fas fa-download"></i> Resume
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <!-- ===== HERO ===== -->
-    <header class="hero" id="home">
-      <div class="hero-container">
-        <div class="hero-content fade-left">
-          <p class="hero-greeting">Hi,</p>
-          <h1 class="hero-title">
-            I’m <span class="highlight">Vidushika Madhushani</span>
-          </h1>
-
-          <h2 class="hero-subtitle">
-            <span id="typed-text" class="typed-text"></span>
-            <span class="cursor">|</span>
-          </h2>
-
-          <p class="hero-description">
-            Motivated IT undergraduate with hands-on experience in software development and one year of
-            professional training in the banking sector. Passionate about <strong>Software Engineering</strong>
-            and <strong>DevOps</strong>, with strong problem-solving and teamwork skills.
-          </p>
-
-          <div class="hero-quick">
-            <div class="quick-item">
-              <i class="fas fa-location-dot"></i><span>Sri Lanka</span>
-            </div>
-            <div class="quick-item">
-              <i class="fas fa-envelope"></i
-              ><a href="mailto:withanagevidhu@gmail.com">withanagevidhu@gmail.com</a>
-            </div>
-          </div>
-
-          <div class="hero-buttons">
-            <a class="btn btn-primary" href="#projects">
-              <i class="fas fa-code"></i> View Projects
-            </a>
-            <a class="btn btn-secondary" href="#contact">
-              <i class="fas fa-paper-plane"></i> Contact Me
-            </a>
-          </div>
-
-          <div class="hero-socials">
-            <a class="social-icon" href="https://github.com/Vidushika0819" target="_blank" rel="noopener" aria-label="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-            <a class="social-icon" href="https://linkedin.com/in/vidhushika-madhushani" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="hero-image fade-right">
-          <div class="image-wrapper">
-            <div class="image-border" aria-hidden="true"></div>
-            <img
-              class="profile-img"
-              src="images/profile.jpg"
-              alt="Profile photo"
-              onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;600&quot; height=&quot;600&quot;><defs><linearGradient id=&quot;g&quot; x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;1&quot; y2=&quot;1&quot;><stop stop-color=&quot;%236c63ff&quot; offset=&quot;0&quot;/><stop stop-color=&quot;%23fd79a8&quot; offset=&quot;1&quot;/></linearGradient></defs><rect width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;url(%23g)&quot;/><text x=&quot;50%&quot; y=&quot;50%&quot; dominant-baseline=&quot;middle&quot; text-anchor=&quot;middle&quot; fill=&quot;white&quot; font-family=&quot;Poppins, Arial&quot; font-size=&quot;120&quot; font-weight=&quot;700&quot;>VM</text></svg>';"
-            />
-          </div>
-
-          <div class="floating-badge badge-1">
-            <i class="fas fa-gears"></i><span>DevOps</span>
-          </div>
-          <div class="floating-badge badge-2">
-            <i class="fas fa-laptop-code"></i><span>Full‑Stack</span>
-          </div>
-          <div class="floating-badge badge-3">
-            <i class="fas fa-cloud"></i><span>Cloud</span>
-          </div>
-        </div>
-      </div>
-
-      <a class="scroll-down" href="#about" aria-label="Scroll down">
-        <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
-        <span>Scroll Down</span>
-      </a>
-
-      <div class="hero-bg-decoration" aria-hidden="true">
-        <div class="circle circle-1"></div>
-        <div class="circle circle-2"></div>
-        <div class="circle circle-3"></div>
-      </div>
-    </header>
-
-    <!-- ===== ABOUT ===== -->
-    <section class="section about" id="about">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Professional Summary</span>
-          <h2 class="section-title">About <span class="highlight">Me</span></h2>
-          <div class="section-divider"></div>
-          <p class="section-description">
-            Seeking an internship opportunity to gain industry experience and contribute to real-world projects.
-          </p>
-        </div>
-
-        <div class="about-grid">
-          <div class="card fade-left">
-            <h3 class="card-title"><i class="fas fa-user"></i> Summary</h3>
-            <p class="muted">
-              Motivated IT undergraduate with hands-on experience in software development and one year of
-              professional training in the banking sector. Skilled in building full-stack and web applications using
-              modern technologies. Passionate about software engineering and DevOps, with strong problem-solving
-              and teamwork skills.
-            </p>
-          </div>
-
-          <div class="card fade-right">
-            <h3 class="card-title"><i class="fas fa-circle-info"></i> Additional Information</h3>
-            <ul class="list">
-              <li>Strong interest in Software Development, DevOps, and Cloud technologies.</li>
-              <li>Quick learner with adaptability to new technologies.</li>
-              <li>Actively seeking internship opportunities.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== SKILLS ===== -->
-    <section class="section skills" id="skills">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Technical Skills</span>
-          <h2 class="section-title">My <span class="highlight">Skills</span></h2>
-          <div class="section-divider"></div>
-        </div>
-
-        <div class="skills-layout">
-          <!-- Programming -->
-          <div class="skills-card card fade-up">
-            <h3 class="card-title"><i class="fas fa-code"></i> Programming</h3>
-
-            <div class="skill-grid">
-              <div class="skill-box"><i class="devicon-java-plain colored"></i><span>Java</span></div>
-              <div class="skill-box"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
-              <div class="skill-box"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
-              <div class="skill-box"><i class="devicon-c-plain colored"></i><span>C</span></div>
-              <div class="skill-box"><i class="devicon-kotlin-plain colored"></i><span>Kotlin</span></div>
-              <div class="skill-box"><i class="devicon-html5-plain colored"></i><span>HTML</span></div>
-              <div class="skill-box"><i class="devicon-css3-plain colored"></i><span>CSS</span></div>
-            </div>
-          </div>
-
-          <!-- Frameworks -->
-          <div class="skills-card card fade-up">
-            <h3 class="card-title"><i class="fas fa-layer-group"></i> Frameworks</h3>
-
-            <div class="skill-grid">
-              <div class="skill-box"><i class="devicon-react-original colored"></i><span>React</span></div>
-              <div class="skill-box"><i class="devicon-nodejs-plain colored"></i><span>Node.js</span></div>
-              <div class="skill-box"><i class="devicon-express-original"></i><span>Express</span></div>
-              <div class="skill-box"><i class="devicon-flask-original colored"></i><span>Flask</span></div>
-
-              <!-- JSP / Servlets: Devicon doesn't always have dedicated icons, so use clean FA icons -->
-              <div class="skill-box"><i class="fas fa-file-code"></i><span>JSP</span></div>
-              <div class="skill-box"><i class="fas fa-gears"></i><span>Servlets</span></div>
-            </div>
-          </div>
-
-          <!-- Databases -->
-          <div class="skills-card card fade-up">
-            <h3 class="card-title"><i class="fas fa-database"></i> Databases</h3>
-
-            <div class="skill-grid">
-              <div class="skill-box"><i class="devicon-mysql-original colored"></i><span>MySQL</span></div>
-              <div class="skill-box"><i class="devicon-mongodb-plain colored"></i><span>MongoDB</span></div>
-              <div class="skill-box"><i class="devicon-oracle-original colored"></i><span>Oracle SQL</span></div>
-            </div>
-          </div>
-
-          <!-- Tools -->
-          <div class="skills-card card fade-up">
-            <h3 class="card-title"><i class="fas fa-screwdriver-wrench"></i> Tools</h3>
-
-            <div class="skill-grid">
-              <div class="skill-box"><i class="devicon-git-plain colored"></i><span>Git</span></div>
-              <div class="skill-box"><i class="devicon-github-original"></i><span>GitHub</span></div>
-              <div class="skill-box"><i class="devicon-postman-plain colored"></i><span>Postman</span></div>
-              <div class="skill-box"><i class="devicon-figma-plain colored"></i><span>Figma</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== PROJECTS ===== -->
-    <section class="section projects" id="projects">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Projects</span>
-          <h2 class="section-title">My <span class="highlight">Projects</span></h2>
-          <div class="section-divider"></div>
-          <p class="section-description">
-            Selected academic and personal projects based on my CV.
-          </p>
-        </div>
-
-        <div class="projects-grid">
-          <!-- 1) Hotel Reservation System -->
-          <article class="project-card fade-up">
-            <div class="project-top">
-              <h3 class="project-title">Hotel Reservation System</h3>
-              <span class="project-badge">PHP + MySQL</span>
-            </div>
-
-            <p class="project-desc">
-              A web-based hotel reservation management system with admin & user dashboards,
-              venue handling, payment simulation, and full CRUD operations.
-            </p>
-
-            <ul class="project-features">
-              <li>User registration & login</li>
-              <li>Admin dashboard (users, venues, reservations – CRUD)</li>
-              <li>Payment simulation + image upload support</li>
-            </ul>
-
-            <div class="chips">
-              <span class="chip">PHP</span>
-              <span class="chip">MySQL</span>
-              <span class="chip">HTML</span>
-              <span class="chip">CSS</span>
-              <span class="chip">XAMPP</span>
-            </div>
-
-            <div class="project-actions">
-              <a
-                class="btn btn-primary btn-sm"
-                href="https://github.com/Vidushika0819/hotel-reservation-system"
-                target="_blank"
-                rel="noopener"
-              >
-                <i class="fab fa-github"></i> GitHub
-              </a>
-            </div>
-          </article>
-
-          <!-- 2) Online E‑Shopping Store -->
-          <article class="project-card fade-up">
-            <div class="project-top">
-              <h3 class="project-title">Online E‑Shopping Store</h3>
-              <span class="project-badge">JSP + Servlet</span>
-            </div>
-
-            <p class="project-desc">
-              Java Servlet + JSP based store management system with login module and stock CRUD operations
-              using JDBC and MySQL following MVC architecture.
-            </p>
-
-            <ul class="project-features">
-              <li>Login validation with database</li>
-              <li>Store/Stock CRUD (Create, Read, Update, Delete)</li>
-              <li>MVC structure with controllers & models</li>
-            </ul>
-
-            <div class="chips">
-              <span class="chip">Java</span>
-              <span class="chip">JSP</span>
-              <span class="chip">Servlets</span>
-              <span class="chip">JDBC</span>
-              <span class="chip">MySQL</span>
-              <span class="chip">Tomcat</span>
-            </div>
-
-            <div class="project-actions">
-              <a
-                class="btn btn-primary btn-sm"
-                href="https://github.com/Vidushika0819/online-eshopping-store"
-                target="_blank"
-                rel="noopener"
-              >
-                <i class="fab fa-github"></i> GitHub
-              </a>
-            </div>
-          </article>
-
-          <!-- 3) Tour Guide Management System -->
-          <article class="project-card fade-up">
-            <div class="project-top">
-              <h3 class="project-title">Tour Guide Management System</h3>
-              <span class="project-badge">JSP + Servlet</span>
-            </div>
-
-            <p class="project-desc">
-              Java web application to manage tour guide details with full CRUD functionality using JDBC and MySQL.
-              Built to demonstrate MVC architecture and clean structure.
-            </p>
-
-            <ul class="project-features">
-              <li>CRUD operations for tour guide records</li>
-              <li>MVC architecture (Model, Controller, JSP Views)</li>
-              <li>Database handling with JDBC</li>
-            </ul>
-
-            <div class="chips">
-              <span class="chip">Java</span>
-              <span class="chip">JSP</span>
-              <span class="chip">Servlets</span>
-              <span class="chip">JDBC</span>
-              <span class="chip">MySQL</span>
-            </div>
-
-            <div class="project-actions">
-              <a
-                class="btn btn-primary btn-sm"
-                href="https://github.com/Vidushika0819/tourguide-system"
-                target="_blank"
-                rel="noopener"
-              >
-                <i class="fab fa-github"></i> GitHub
-              </a>
-            </div>
-          </article>
-
-          <!-- 4) SafeGo -->
-          <article class="project-card fade-up">
-            <div class="project-top">
-              <h3 class="project-title">SafeGo – Smart School Bus Monitoring Portal</h3>
-              <span class="project-badge">MERN</span>
-            </div>
-
-            <p class="project-desc">
-              Full MERN-stack system designed to improve school bus safety and student monitoring with multiple modules
-              for Admin, Parent, Coordinator and Driver roles.
-            </p>
-
-            <ul class="project-features">
-              <li>Role-based portals + activity logs</li>
-              <li>Bus tracking simulation & alerts</li>
-              <li>Trip schedules + payment/cost handling</li>
-            </ul>
-
-            <div class="chips">
-              <span class="chip">MongoDB</span>
-              <span class="chip">Express</span>
-              <span class="chip">React</span>
-              <span class="chip">Node.js</span>
-              <span class="chip">JWT</span>
-              <span class="chip">REST API</span>
-            </div>
-
-            <div class="project-actions">
-              <a
-                class="btn btn-primary btn-sm"
-                href="https://github.com/Vidushika0819/smart-school-bus-system"
-                target="_blank"
-                rel="noopener"
-              >
-                <i class="fab fa-github"></i> GitHub
-              </a>
-            </div>
-          </article>
-
-          <!-- 5) Habit Tracker App -->
-          <article class="project-card fade-up">
-            <div class="project-top">
-              <h3 class="project-title">Habit Tracker App</h3>
-              <span class="project-badge">Kotlin + Room</span>
-            </div>
-
-            <p class="project-desc">
-              Simple Android application to track daily habits, mark progress, and improve consistency using
-              local storage with Room database.
-            </p>
-
-            <ul class="project-features">
-              <li>Add / update / delete habits</li>
-              <li>Mark habits as completed</li>
-              <li>Local database (Room)</li>
-            </ul>
-
-            <div class="chips">
-              <span class="chip">Kotlin</span>
-              <span class="chip">Android</span>
-              <span class="chip">Room</span>
-              <span class="chip">XML UI</span>
-            </div>
-
-            <div class="project-actions">
-              <a
-                class="btn btn-primary btn-sm"
-                href="https://github.com/Vidushika0819/habit-tracker-app"
-                target="_blank"
-                rel="noopener"
-              >
-                <i class="fab fa-github"></i> GitHub
-              </a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== EDUCATION ===== -->
-    <section class="section education" id="education">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Education</span>
-          <h2 class="section-title">My <span class="highlight">Education</span></h2>
-          <div class="section-divider"></div>
-        </div>
-
-        <div class="timeline fade-up">
-          <div class="timeline-item">
-            <div class="timeline-dot" aria-hidden="true"></div>
-            <div class="timeline-card">
-              <p class="timeline-date"><i class="fas fa-calendar-alt"></i> 2023 – 2027 (Expected)</p>
-              <h3 class="timeline-title">Bachelor of Science in Information Technology</h3>
-              <p class="timeline-sub">Sri Lanka Institute of Information Technology (SLIIT)</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== EXPERIENCE ===== -->
-    <section class="section experience" id="experience">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Experience</span>
-          <h2 class="section-title">Work <span class="highlight">Experience</span></h2>
-          <div class="section-divider"></div>
-        </div>
-
-        <div class="experience-grid">
-          <article class="exp-card fade-up">
-            <div class="exp-head">
-              <div class="exp-icon"><i class="fas fa-building-columns"></i></div>
-              <div>
-                <h3 class="exp-title">Trainee – People’s Bank, Sri Lanka</h3>
-                <p class="exp-date">Jan 2022 – Jan 2023</p>
-              </div>
-            </div>
-            <ul class="list">
-              <li>Completed one-year training under the Advanced Level school leavers training scheme.</li>
-              <li>Gained exposure to operations at the Regional Head Office – Gampaha.</li>
-              <li>Assisted in administrative and banking-related tasks, improving organizational and communication skills.</li>
-              <li>Developed understanding of banking processes and professional work environment.</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== LEADERSHIP ===== -->
-    <section class="section leadership" id="leadership">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Leadership</span>
-          <h2 class="section-title">Leadership <span class="highlight">Highlights</span></h2>
-          <div class="section-divider"></div>
-        </div>
-
-        <div class="card fade-up">
-          <ul class="list">
-            <li>Led multiple university project teams, ensuring coordination and timely completion.</li>
-            <li>Strengthened teamwork, communication, and problem-solving skills.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== CONTACT ===== -->
-    <section class="section contact" id="contact">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Get In Touch</span>
-          <h2 class="section-title">Contact <span class="highlight">Me</span></h2>
-          <div class="section-divider"></div>
-          <p class="section-description">
-            You can email me directly or use the form (it opens your email app).
-          </p>
-        </div>
-
-        <div class="contact-grid">
-          <div class="contact-cards fade-left">
-            <a class="contact-card" href="mailto:withanagevidhu@gmail.com">
-              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-              <div>
-                <p class="contact-label">Email</p>
-                <p class="contact-value">withanagevidhu@gmail.com</p>
-              </div>
-            </a>
-
-            <a class="contact-card" href="https://linkedin.com/in/vidhushika-madhushani" target="_blank" rel="noopener">
-              <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
-              <div>
-                <p class="contact-label">LinkedIn</p>
-                <p class="contact-value">vidhushika-madhushani</p>
-              </div>
-            </a>
-
-            <a class="contact-card" href="https://github.com/Vidushika0819" target="_blank" rel="noopener">
-              <div class="contact-icon"><i class="fab fa-github"></i></div>
-              <div>
-                <p class="contact-label">GitHub</p>
-                <p class="contact-value">Vidushika0819</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="contact-form-wrap fade-right">
-            <form class="contact-form" id="contact-form">
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="name">Full Name *</label>
-                  <input id="name" type="text" placeholder="Your name" required />
-                </div>
-                <div class="form-group">
-                  <label for="email">Email *</label>
-                  <input id="email" type="email" placeholder="your@email.com" required />
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="subject">Subject</label>
-                <input id="subject" type="text" placeholder="Internship / Project / Collaboration" />
-              </div>
-
-              <div class="form-group">
-                <label for="message">Message *</label>
-                <textarea id="message" placeholder="Write your message..." required></textarea>
-              </div>
-
-              <button class="btn btn-primary submit-btn" type="submit">
-                <i class="fas fa-paper-plane"></i> Send Message
-              </button>
-
-              <div class="form-message" id="form-message"></div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-      <div class="footer-inner">
-        <p class="footer-text">
-          © <span id="year"></span> <strong>Vidushika Madhushani</strong>. Built with HTML, CSS & JavaScript.
-        </p>
-      </div>
-    </footer>
-
-    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
-      <i class="fas fa-chevron-up"></i>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="description"
+    content="Vidushika Madhushani - IT Undergraduate Portfolio"
+  />
+  <meta name="author" content="Vidushika Madhushani" />
+
+  <title>Vidushika Madhushani | IT Undergraduate</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <!-- Devicon -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+  />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+
+    <a href="#home" class="nav-logo">
+      <span class="logo-text">VM</span>
+    </a>
+
+    <button
+      class="hamburger"
+      id="hamburger"
+      aria-label="Toggle navigation"
+      type="button"
+    >
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
     </button>
 
-    <script src="js/main.js"></script>
-  </body>
+    <ul class="nav-links" id="nav-links">
+      <li><a class="nav-link active" href="#home">Home</a></li>
+      <li><a class="nav-link" href="#about">About</a></li>
+      <li><a class="nav-link" href="#skills">Skills</a></li>
+      <li><a class="nav-link" href="#projects">Projects</a></li>
+      <li><a class="nav-link" href="#education">Education</a></li>
+      <li><a class="nav-link" href="#experience">Experience</a></li>
+      <li><a class="nav-link" href="#leadership">Leadership</a></li>
+      <li><a class="nav-link" href="#contact">Contact</a></li>
+
+      <li>
+        <a
+          class="nav-link resume-btn"
+          href="assets/resume.pdf"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fas fa-download"></i>
+          Resume
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="home">
+
+  <div class="hero-container">
+
+    <div class="hero-content fade-left">
+
+      <p class="hero-greeting">Hi, I'm</p>
+
+      <h1 class="hero-title">
+        <span class="highlight">Vidushika Madhushani</span>
+      </h1>
+
+      <h2 class="hero-subtitle">
+        <span id="typed-text" class="typed-text"></span>
+        <span class="cursor">|</span>
+      </h2>
+
+      <p class="hero-description">
+        Motivated IT undergraduate with hands-on experience in full-stack
+        software development and one year of professional training in the
+        banking sector. Passionate about
+        <strong>Software Engineering</strong>,
+        <strong>DevOps</strong>, and
+        <strong>Cloud Technologies</strong>.
+      </p>
+
+      <div class="hero-quick">
+
+        <div class="quick-item">
+          <i class="fas fa-location-dot"></i>
+          <span>Sri Lanka</span>
+        </div>
+
+        <div class="quick-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:withanagevidhu@gmail.com">
+            withanagevidhu@gmail.com
+          </a>
+        </div>
+
+      </div>
+
+      <div class="hero-buttons">
+
+        <a class="btn btn-primary" href="#projects">
+          <i class="fas fa-code"></i>
+          View Projects
+        </a>
+
+        <a class="btn btn-secondary" href="#contact">
+          <i class="fas fa-paper-plane"></i>
+          Contact Me
+        </a>
+
+      </div>
+
+      <div class="hero-socials">
+
+        <a
+          class="social-icon"
+          href="https://github.com/Vidushika0819"
+          target="_blank"
+          rel="noopener"
+          aria-label="GitHub"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+
+        <a
+          class="social-icon"
+          href="https://linkedin.com/in/vidhushika-madhushani"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
+        >
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="hero-image fade-right">
+
+      <div class="image-wrapper">
+
+        <div class="image-border"></div>
+
+        <img
+          class="profile-img"
+          src="images/profile.jpg"
+          alt="Vidushika Madhushani profile photo"
+          onerror="this.style.display='none';"
+        />
+
+      </div>
+
+      <div class="floating-badge badge-1">
+        <i class="fas fa-gears"></i>
+        <span>DevOps</span>
+      </div>
+
+      <div class="floating-badge badge-2">
+        <i class="fas fa-laptop-code"></i>
+        <span>Full-Stack</span>
+      </div>
+
+      <div class="floating-badge badge-3">
+        <i class="fas fa-cloud"></i>
+        <span>Cloud</span>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <a class="scroll-down" href="#about" aria-label="Scroll to About">
+    <div class="scroll-mouse">
+      <div class="scroll-wheel"></div>
+    </div>
+    <span>Scroll Down</span>
+  </a>
+
+  <div class="hero-bg-decoration">
+    <div class="circle circle-1"></div>
+    <div class="circle circle-2"></div>
+    <div class="circle circle-3"></div>
+  </div>
+
+</header>
+
+
+<!-- ================= ABOUT ================= -->
+<section class="section about" id="about">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <span class="section-tag">Professional Summary</span>
+
+      <h2 class="section-title">
+        About <span class="highlight">Me</span>
+      </h2>
+
+      <div class="section-divider"></div>
+
+      <p class="section-description">
+        IT undergraduate seeking an internship opportunity to gain industry
+        experience and contribute to real-world software projects.
+      </p>
+
+    </div>
+
+
+    <div class="about-grid">
+
+      <div class="card fade-left">
+
+        <h3 class="card-title">
+          <i class="fas fa-user"></i>
+          Professional Summary
+        </h3>
+
+        <p class="muted">
+          Motivated IT undergraduate with hands-on experience in full-stack,
+          web, and mobile application development, along with one year of
+          professional training in the banking sector. Skilled in Java,
+          JavaScript, React, Node.js, Express.js, Spring Boot, PHP, Kotlin,
+          and modern database technologies.
+        </p>
+
+        <br />
+
+        <p class="muted">
+          Experienced in RESTful API development, authentication and
+          authorization, database management, responsive UI development,
+          and software testing. Passionate about Software Engineering,
+          DevOps, and Cloud technologies.
+        </p>
+
+      </div>
+
+
+      <div class="card fade-right">
+
+        <h3 class="card-title">
+          <i class="fas fa-circle-info"></i>
+          Additional Information
+        </h3>
+
+        <ul class="list">
+
+          <li>
+            Strong interest in Software Development, DevOps, and Cloud.
+          </li>
+
+          <li>
+            Experience developing full-stack academic projects.
+          </li>
+
+          <li>
+            Familiar with RESTful APIs and authentication.
+          </li>
+
+          <li>
+            Quick learner with adaptability to new technologies.
+          </li>
+
+          <li>
+            Strong teamwork and problem-solving skills.
+          </li>
+
+          <li>
+            Actively seeking internship opportunities.
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= SKILLS ================= -->
+<section class="section skills" id="skills">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <span class="section-tag">Technical Skills</span>
+
+      <h2 class="section-title">
+        My <span class="highlight">Skills</span>
+      </h2>
+
+      <div class="section-divider"></div>
+
+      <p class="section-description">
+        Technologies and tools I have worked with through academic and
+        personal software projects.
+      </p>
+
+    </div>
+
+
+    <div class="skills-layout">
+
+
+      <!-- Programming -->
+      <div class="skills-card card fade-up">
+
+        <h3 class="card-title">
+          <i class="fas fa-code"></i>
+          Programming
+        </h3>
+
+        <div class="skill-grid">
+
+          <div class="skill-box">
+            <i class="devicon-java-plain colored"></i>
+            <span>Java</span>
+          </div>
+
+          <div class="skill-box">
+            <i class="devicon-javascript-plain colored"></i>
+            <span>JavaScript</span>
+          </div>
+
+          <div class="skill-box">
+            <i class="devicon-php-plain colored"></i>
+            <span>PHP</span>
+          </div>
+
+          <div class="skill-box">
+            <i class="devicon-c-plain colored"></i>
+            <span>C</span>
+          </div>
+
+          <div class="skill-box">
+            <i class="devicon-kotlin-plain colored"></i>
+            <span>Kotlin</span>
+          </div>
+
+          <div class="skill-box">
+            <i class="devicon-html5-plain colored"></i>
+            <span>HTML5</span>
+          </div>
+
+          <div class="skill-box">
+            <i class="devicon-css3-plain colored"></i>
+            <span>CSS3</span>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Frontend -->
+      <div class="skills-card card fade-up">
+
+        <h3 class="card-title">
+          <i class="fas fa-display"></i>
+          Frontend
+        </h3>
+
+        <div class="skill-grid">
+
+          <div class="skill-box">
+            <i class="devicon-react-original colored"></i>
+            <span>React</span>
+          </div>
+
+          <div class="skill-box">
+            <i class="devicon-html5-plain colored"></i>
+            <span>HTML5</span>
+          </div>
+
+          <div class="skill-box">
+            <i class="devicon-css3-plain colored"></i>
+            <span>CSS3</span>
+          </div>
+
+          <div class="skill-box">
+            <i class="devicon-bootstrap-plain colored"></i>
+            <span>Bootstrap</span>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Backend -->
+      <div class="skills-card card fade-up">
+
+        <h3 class="card-title">
+          <i class="fas fa-server"></i>
+          Backend
+        </h3>
+
+        <div class="skill-grid">
+
+          <div class="skill-box">
+            <i class="devicon-nodejs-plain colored"></i>
+            <span>Node.js</span>
+          </div>
+
+          <div class="skill-box">
+            <i class="devicon-express-original"></i>
+            <span>Express.js</span>
+          </div>
+
+          <div class="skill-box">
+            <i class="devicon-spring-original colored"></i>
+            <span>Spring Boot</span>
+          </div>
+
+          <div class="skill-box">
+            <i class="devicon-flask-original colored"></i>
+            <span>Flask</span>
+          </div>
+
+          <div class="skill-box">
+            <i class="fas fa-file-code"></i>
+            <span>JSP</span>
+          </div>
+
+          <div class="skill-box">
+            <i class="fas fa-gears"></i>
+            <span>Servlets</span>
+          </div>
+
+          <div class="skill-box">
+            <i class="devicon-php-plain colored"></i>
+            <span>PHP</span>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Databases -->
+      <div class="skills-card card fade-up">
+
+        <h3 class="card-title">
+          <i class="fas fa-database"></i>
+          Databases
+        </h3>
+
+        <div class="skill-grid">
+
+          <div class="skill-box">
+            <i class="devicon-mysql-original colored"></i>
+            <span>MySQL</span>
+          </div>
+
+          <div class="skill-box">
+            <i class="devicon-mongodb-plain colored"></i>
+            <span>MongoDB</span>
+          </div>
+
+          <div class="skill-box">
+            <i class="devicon-postgresql-plain colored"></i>
+            <span>PostgreSQL</span>
+          </div>
+
+          <div class="skill-box">
+            <i class="devicon-oracle-original colored"></i>
+            <span>Oracle SQL</span>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Authentication -->
+      <div class="skills-card card fade-up">
+
+        <h3 class="card-title">
+          <i class="fas fa-shield-halved"></i>
+          Authentication & APIs
+        </h3>
+
+        <div class="skill-grid">
+
+          <div class="skill-box">
+            <i class="fas fa-key"></i>
+            <span>JWT</span>
+          </div>
+
+          <div class="skill-box">
+            <i class="fab fa-google"></i>
+            <span>Google OAuth</span>
+          </div>
+
+          <div class="skill-box">
+            <i class="fas fa-cloud"></i>
+            <span>REST APIs</span>
+          </div>
+
+          <div class="skill-box">
+            <i class="devicon-postman-plain colored"></i>
+            <span>Postman</span>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Tools -->
+      <div class="skills-card card fade-up">
+
+        <h3 class="card-title">
+          <i class="fas fa-screwdriver-wrench"></i>
+          Tools & Platforms
+        </h3>
+
+        <div class="skill-grid">
+
+          <div class="skill-box">
+            <i class="devicon-git-plain colored"></i>
+            <span>Git</span>
+          </div>
+
+          <div class="skill-box">
+            <i class="devicon-github-original"></i>
+            <span>GitHub</span>
+          </div>
+
+          <div class="skill-box">
+            <i class="devicon-figma-plain colored"></i>
+            <span>Figma</span>
+          </div>
+
+          <div class="skill-box">
+            <i class="fas fa-cloud"></i>
+            <span>Cloudinary</span>
+          </div>
+
+          <div class="skill-box">
+            <i class="fas fa-server"></i>
+            <span>REST API</span>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Development Concepts -->
+      <div class="skills-card card fade-up">
+
+        <h3 class="card-title">
+          <i class="fas fa-layer-group"></i>
+          Development
+        </h3>
+
+        <div class="skill-grid">
+
+          <div class="skill-box">
+            <i class="fas fa-code-branch"></i>
+            <span>MVC</span>
+          </div>
+
+          <div class="skill-box">
+            <i class="fas fa-database"></i>
+            <span>CRUD</span>
+          </div>
+
+          <div class="skill-box">
+            <i class="fas fa-lock"></i>
+            <span>RBAC</span>
+          </div>
+
+          <div class="skill-box">
+            <i class="fas fa-vial"></i>
+            <span>Testing</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= PROJECTS ================= -->
+<section class="section projects" id="projects">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <span class="section-tag">Featured Work</span>
+
+      <h2 class="section-title">
+        My <span class="highlight">Projects</span>
+      </h2>
+
+      <div class="section-divider"></div>
+
+      <p class="section-description">
+        Selected academic and personal software development projects.
+      </p>
+
+    </div>
+
+
+    <div class="projects-grid">
+
+
+      <!-- EVENTRIX -->
+      <article class="project-card fade-up">
+
+        <div class="project-top">
+
+          <h3 class="project-title">
+            Eventrix – University Event Management Platform
+          </h3>
+
+          <span class="project-badge">
+            MERN
+          </span>
+
+        </div>
+
+        <p class="project-desc">
+          Full-stack university event management platform supporting
+          Admin, Organizer, and Student roles.
+        </p>
+
+        <ul class="project-features">
+
+          <li>Event creation and session management</li>
+
+          <li>Event registration and attendee tracking</li>
+
+          <li>Notifications and user management</li>
+
+          <li>Responsive React dashboards</li>
+
+          <li>JWT and Google OAuth 2.0 authentication</li>
+
+          <li>Cloudinary event image management</li>
+
+        </ul>
+
+        <div class="chips">
+
+          <span class="chip">React</span>
+          <span class="chip">Node.js</span>
+          <span class="chip">Express.js</span>
+          <span class="chip">MongoDB</span>
+          <span class="chip">JWT</span>
+          <span class="chip">Google OAuth</span>
+          <span class="chip">Cloudinary</span>
+          <span class="chip">REST API</span>
+
+        </div>
+
+        <div class="project-actions">
+
+          <a
+            class="btn btn-primary btn-sm"
+            href="https://github.com/Vidushika0819"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fab fa-github"></i>
+            GitHub
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- SMART CAMPUS -->
+      <article class="project-card fade-up">
+
+        <div class="project-top">
+
+          <h3 class="project-title">
+            Smart Campus – Property Allocation Framework
+          </h3>
+
+          <span class="project-badge">
+            React + Spring Boot
+          </span>
+
+        </div>
+
+        <p class="project-desc">
+          Full-stack campus resource management platform for resource
+          allocation, bookings, support tickets, notifications, and users.
+        </p>
+
+        <ul class="project-features">
+
+          <li>Role-based access for Admin, User, and Technician</li>
+
+          <li>Resource availability and booking workflows</li>
+
+          <li>Support ticket and notification management</li>
+
+          <li>Analytics dashboard with system KPIs</li>
+
+          <li>Multi-factor resource recommendation engine</li>
+
+          <li>RESTful APIs using Spring Boot and Spring Security</li>
+
+        </ul>
+
+        <div class="chips">
+
+          <span class="chip">React</span>
+          <span class="chip">Spring Boot</span>
+          <span class="chip">Spring Data JPA</span>
+          <span class="chip">Spring Security</span>
+          <span class="chip">PostgreSQL</span>
+          <span class="chip">JWT</span>
+          <span class="chip">Google OAuth</span>
+          <span class="chip">REST API</span>
+
+        </div>
+
+        <div class="project-actions">
+
+          <a
+            class="btn btn-primary btn-sm"
+            href="https://github.com/Vidushika0819"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fab fa-github"></i>
+            GitHub
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- HOTEL -->
+      <article class="project-card fade-up">
+
+        <div class="project-top">
+
+          <h3 class="project-title">
+            Hotel Reservation System
+          </h3>
+
+          <span class="project-badge">
+            PHP + MySQL
+          </span>
+
+        </div>
+
+        <p class="project-desc">
+          Web-based hotel reservation management system with admin and
+          user dashboards, venue handling, payment simulation, and CRUD.
+        </p>
+
+        <ul class="project-features">
+
+          <li>User registration and login</li>
+
+          <li>Admin dashboard with CRUD operations</li>
+
+          <li>Venue and reservation management</li>
+
+          <li>Payment simulation and image upload</li>
+
+        </ul>
+
+        <div class="chips">
+
+          <span class="chip">PHP</span>
+          <span class="chip">MySQL</span>
+          <span class="chip">HTML</span>
+          <span class="chip">CSS</span>
+          <span class="chip">XAMPP</span>
+
+        </div>
+
+        <div class="project-actions">
+
+          <a
+            class="btn btn-primary btn-sm"
+            href="https://github.com/Vidushika0819/hotel-reservation-system"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fab fa-github"></i>
+            GitHub
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- ONLINE ESHOP -->
+      <article class="project-card fade-up">
+
+        <div class="project-top">
+
+          <h3 class="project-title">
+            Online E-Shopping Store
+          </h3>
+
+          <span class="project-badge">
+            JSP + Servlet
+          </span>
+
+        </div>
+
+        <p class="project-desc">
+          Java Servlet and JSP-based store management system using JDBC
+          and MySQL following MVC architecture.
+        </p>
+
+        <ul class="project-features">
+
+          <li>Login validation with database</li>
+
+          <li>Store and stock CRUD operations</li>
+
+          <li>MVC architecture</li>
+
+          <li>JDBC database connectivity</li>
+
+        </ul>
+
+        <div class="chips">
+
+          <span class="chip">Java</span>
+          <span class="chip">JSP</span>
+          <span class="chip">Servlets</span>
+          <span class="chip">JDBC</span>
+          <span class="chip">MySQL</span>
+          <span class="chip">Tomcat</span>
+
+        </div>
+
+        <div class="project-actions">
+
+          <a
+            class="btn btn-primary btn-sm"
+            href="https://github.com/Vidushika0819/online-eshopping-store"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fab fa-github"></i>
+            GitHub
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- TOUR GUIDE -->
+      <article class="project-card fade-up">
+
+        <div class="project-top">
+
+          <h3 class="project-title">
+            Tour Guide Management System
+          </h3>
+
+          <span class="project-badge">
+            JSP + Servlet
+          </span>
+
+        </div>
+
+        <p class="project-desc">
+          Java web application for managing tour guide records with
+          full CRUD functionality using JDBC and MySQL.
+        </p>
+
+        <ul class="project-features">
+
+          <li>Tour guide CRUD operations</li>
+
+          <li>MVC architecture</li>
+
+          <li>JDBC database handling</li>
+
+          <li>MySQL integration</li>
+
+        </ul>
+
+        <div class="chips">
+
+          <span class="chip">Java</span>
+          <span class="chip">JSP</span>
+          <span class="chip">Servlets</span>
+          <span class="chip">JDBC</span>
+          <span class="chip">MySQL</span>
+
+        </div>
+
+        <div class="project-actions">
+
+          <a
+            class="btn btn-primary btn-sm"
+            href="https://github.com/Vidushika0819/tourguide-system"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fab fa-github"></i>
+            GitHub
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- SAFEGO -->
+      <article class="project-card fade-up">
+
+        <div class="project-top">
+
+          <h3 class="project-title">
+            SafeGo – Smart School Bus Monitoring Portal
+          </h3>
+
+          <span class="project-badge">
+            MERN
+          </span>
+
+        </div>
+
+        <p class="project-desc">
+          Full-stack school bus safety and student monitoring system
+          supporting Admin, Parent, Coordinator, and Driver roles.
+        </p>
+
+        <ul class="project-features">
+
+          <li>Role-based portals and activity logs</li>
+
+          <li>Bus tracking simulation and alerts</li>
+
+          <li>Trip scheduling</li>
+
+          <li>Payment and cost management</li>
+
+        </ul>
+
+        <div class="chips">
+
+          <span class="chip">MongoDB</span>
+          <span class="chip">Express</span>
+          <span class="chip">React</span>
+          <span class="chip">Node.js</span>
+          <span class="chip">JWT</span>
+          <span class="chip">REST API</span>
+
+        </div>
+
+        <div class="project-actions">
+
+          <a
+            class="btn btn-primary btn-sm"
+            href="https://github.com/Vidushika0819/smart-school-bus-system"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fab fa-github"></i>
+            GitHub
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- HABIT TRACKER -->
+      <article class="project-card fade-up">
+
+        <div class="project-top">
+
+          <h3 class="project-title">
+            Habit Tracker App
+          </h3>
+
+          <span class="project-badge">
+            Kotlin + Room
+          </span>
+
+        </div>
+
+        <p class="project-desc">
+          Android application for tracking daily habits, monitoring
+          progress, and improving consistency using local storage.
+        </p>
+
+        <ul class="project-features">
+
+          <li>Add, update, and delete habits</li>
+
+          <li>Mark habits as completed</li>
+
+          <li>Local Room database</li>
+
+          <li>Android XML user interface</li>
+
+        </ul>
+
+        <div class="chips">
+
+          <span class="chip">Kotlin</span>
+          <span class="chip">Android</span>
+          <span class="chip">Room</span>
+          <span class="chip">XML</span>
+
+        </div>
+
+        <div class="project-actions">
+
+          <a
+            class="btn btn-primary btn-sm"
+            href="https://github.com/Vidushika0819/habit-tracker-app"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fab fa-github"></i>
+            GitHub
+          </a>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= EDUCATION ================= -->
+<section class="section education" id="education">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <span class="section-tag">Education</span>
+
+      <h2 class="section-title">
+        My <span class="highlight">Education</span>
+      </h2>
+
+      <div class="section-divider"></div>
+
+    </div>
+
+
+    <div class="timeline fade-up">
+
+      <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-card">
+
+          <p class="timeline-date">
+            <i class="fas fa-calendar-alt"></i>
+            2023 – 2027 (Expected)
+          </p>
+
+          <h3 class="timeline-title">
+            Bachelor of Science in Information Technology
+          </h3>
+
+          <p class="timeline-sub">
+            Sri Lanka Institute of Information Technology (SLIIT)
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= EXPERIENCE ================= -->
+<section class="section experience" id="experience">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <span class="section-tag">Experience</span>
+
+      <h2 class="section-title">
+        Work <span class="highlight">Experience</span>
+      </h2>
+
+      <div class="section-divider"></div>
+
+    </div>
+
+
+    <div class="experience-grid">
+
+      <article class="exp-card card fade-up">
+
+        <div class="exp-head">
+
+          <div class="exp-icon">
+            <i class="fas fa-building-columns"></i>
+          </div>
+
+          <div>
+
+            <h3 class="exp-title">
+              Trainee – People's Bank, Sri Lanka
+            </h3>
+
+            <p class="exp-date">
+              Jan 2022 – Jan 2023
+            </p>
+
+          </div>
+
+        </div>
+
+        <ul class="list">
+
+          <li>
+            Completed one-year training under the Advanced Level
+            school leavers training scheme.
+          </li>
+
+          <li>
+            Gained exposure to operations at the Regional Head Office –
+            Gampaha.
+          </li>
+
+          <li>
+            Assisted in administrative and banking-related tasks.
+          </li>
+
+          <li>
+            Developed organizational, communication, and professional
+            workplace skills.
+          </li>
+
+        </ul>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= LEADERSHIP ================= -->
+<section class="section leadership" id="leadership">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <span class="section-tag">Leadership</span>
+
+      <h2 class="section-title">
+        Leadership <span class="highlight">Highlights</span>
+      </h2>
+
+      <div class="section-divider"></div>
+
+    </div>
+
+
+    <div class="card fade-up">
+
+      <ul class="list">
+
+        <li>
+          Led multiple university project teams, ensuring coordination
+          and timely completion.
+        </li>
+
+        <li>
+          Strengthened teamwork, communication, and problem-solving skills.
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+<section class="section contact" id="contact">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <span class="section-tag">Get In Touch</span>
+
+      <h2 class="section-title">
+        Contact <span class="highlight">Me</span>
+      </h2>
+
+      <div class="section-divider"></div>
+
+      <p class="section-description">
+        Feel free to contact me regarding internship opportunities,
+        projects, or collaborations.
+      </p>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+      <div class="contact-cards fade-left">
+
+        <a
+          class="contact-card"
+          href="mailto:withanagevidhu@gmail.com"
+        >
+
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+
+          <div>
+            <p class="contact-label">Email</p>
+            <p class="contact-value">
+              withanagevidhu@gmail.com
+            </p>
+          </div>
+
+        </a>
+
+
+        <a
+          class="contact-card"
+          href="https://linkedin.com/in/vidhushika-madhushani"
+          target="_blank"
+          rel="noopener"
+        >
+
+          <div class="contact-icon">
+            <i class="fab fa-linkedin-in"></i>
+          </div>
+
+          <div>
+            <p class="contact-label">LinkedIn</p>
+            <p class="contact-value">
+              vidhushika-madhushani
+            </p>
+          </div>
+
+        </a>
+
+
+        <a
+          class="contact-card"
+          href="https://github.com/Vidushika0819"
+          target="_blank"
+          rel="noopener"
+        >
+
+          <div class="contact-icon">
+            <i class="fab fa-github"></i>
+          </div>
+
+          <div>
+            <p class="contact-label">GitHub</p>
+            <p class="contact-value">
+              Vidushika0819
+            </p>
+          </div>
+
+        </a>
+
+      </div>
+
+
+      <div class="contact-form-wrap fade-right">
+
+        <form class="contact-form" id="contact-form">
+
+          <div class="form-row">
+
+            <div class="form-group">
+
+              <label for="name">
+                Full Name *
+              </label>
+
+              <input
+                id="name"
+                type="text"
+                placeholder="Your name"
+                required
+              />
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="email">
+                Email *
+              </label>
+
+              <input
+                id="email"
+                type="email"
+                placeholder="your@email.com"
+                required
+              />
+
+            </div>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="subject">
+              Subject
+            </label>
+
+            <input
+              id="subject"
+              type="text"
+              placeholder="Internship / Project / Collaboration"
+            />
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="message">
+              Message *
+            </label>
+
+            <textarea
+              id="message"
+              placeholder="Write your message..."
+              required
+            ></textarea>
+
+          </div>
+
+
+          <button
+            class="btn btn-primary submit-btn"
+            type="submit"
+          >
+            <i class="fas fa-paper-plane"></i>
+            Send Message
+          </button>
+
+          <div
+            class="form-message"
+            id="form-message"
+          ></div>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+
+  <div class="footer-inner">
+
+    <p class="footer-text">
+      © <span id="year"></span>
+      <strong>Vidushika Madhushani</strong>.
+      Built with HTML, CSS & JavaScript.
+    </p>
+
+  </div>
+
+</footer>
+
+
+<button
+  class="back-to-top"
+  id="back-to-top"
+  aria-label="Back to top"
+>
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+
+<!-- ONLY ONE JAVASCRIPT FILE -->
+<script src="js/main.js"></script>
+
+</body>
 </html>
