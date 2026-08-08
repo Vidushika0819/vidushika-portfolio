@@ -1,197 +1,549 @@
+/* =====================================================
+   PORTFOLIO MAIN JAVASCRIPT
+   Vidushika Madhushani
+===================================================== */
+
 document.addEventListener("DOMContentLoaded", () => {
-  // ===== Elements =====
+
+  /* ================= ELEMENTS ================= */
+
   const navbar = document.getElementById("navbar");
   const hamburger = document.getElementById("hamburger");
   const navLinksContainer = document.getElementById("nav-links");
   const navLinks = document.querySelectorAll(".nav-link");
-  const sections = document.querySelectorAll("section[id], header[id]");
+
+  const sections = document.querySelectorAll(
+    "section[id], header[id]"
+  );
+
   const typedTextEl = document.getElementById("typed-text");
   const backToTopBtn = document.getElementById("back-to-top");
 
-  // ===== 1) Navbar scroll style =====
+  const form = document.getElementById("contact-form");
+  const messageBox = document.getElementById("form-message");
+
+  const yearEl = document.getElementById("year");
+
+
+  /* ================= NAVBAR SCROLL ================= */
+
   function onScroll() {
-    if (window.scrollY > 50) navbar.classList.add("scrolled");
-    else navbar.classList.remove("scrolled");
+
+    if (navbar) {
+
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+
+    }
 
     updateActiveLink();
     updateBackToTop();
+
   }
+
   window.addEventListener("scroll", onScroll);
+
   onScroll();
 
-  // ===== 2) Active nav link =====
+
+  /* ================= ACTIVE NAV LINK ================= */
+
   function updateActiveLink() {
+
     const y = window.scrollY + 140;
 
     sections.forEach((section) => {
+
       const top = section.offsetTop;
       const height = section.offsetHeight;
       const id = section.getAttribute("id");
 
-      if (y >= top && y < top + height) {
-        navLinks.forEach((a) => {
-          a.classList.toggle("active", a.getAttribute("href") === `#${id}`);
+      if (
+        y >= top &&
+        y < top + height
+      ) {
+
+        navLinks.forEach((link) => {
+
+          link.classList.toggle(
+            "active",
+            link.getAttribute("href") === `#${id}`
+          );
+
         });
+
       }
+
     });
+
   }
 
-  // ===== 3) Mobile menu =====
-  if (hamburger && navLinksContainer) {
-    hamburger.addEventListener("click", (e) => {
-      e.stopPropagation();
-      hamburger.classList.toggle("active");
-      navLinksContainer.classList.toggle("open");
-    });
 
-    navLinksContainer.querySelectorAll(".nav-link").forEach((link) => {
-      link.addEventListener("click", () => {
-        hamburger.classList.remove("active");
-        navLinksContainer.classList.remove("open");
+  /* ================= MOBILE MENU ================= */
+
+  if (
+    hamburger &&
+    navLinksContainer
+  ) {
+
+    hamburger.addEventListener(
+      "click",
+      (event) => {
+
+        event.stopPropagation();
+
+        hamburger.classList.toggle("active");
+
+        navLinksContainer.classList.toggle("open");
+
+      }
+    );
+
+
+    navLinksContainer
+      .querySelectorAll(".nav-link")
+      .forEach((link) => {
+
+        link.addEventListener(
+          "click",
+          () => {
+
+            hamburger.classList.remove("active");
+
+            navLinksContainer.classList.remove("open");
+
+          }
+        );
+
       });
-    });
 
-    document.addEventListener("click", (e) => {
-      if (!hamburger.contains(e.target) && !navLinksContainer.contains(e.target)) {
-        hamburger.classList.remove("active");
-        navLinksContainer.classList.remove("open");
+
+    document.addEventListener(
+      "click",
+      (event) => {
+
+        if (
+          !hamburger.contains(event.target) &&
+          !navLinksContainer.contains(event.target)
+        ) {
+
+          hamburger.classList.remove("active");
+
+          navLinksContainer.classList.remove("open");
+
+        }
+
       }
-    });
+    );
+
   }
 
-  // ===== 4) Smooth scroll =====
-  document.querySelectorAll('a[href^="#"]').forEach((a) => {
-    a.addEventListener("click", (e) => {
-      const href = a.getAttribute("href");
-      if (!href || href === "#" || href.length < 2) return;
 
-      const target = document.querySelector(href);
-      if (!target) return;
+  /* ================= SMOOTH SCROLL ================= */
 
-      e.preventDefault();
-      const offset = 80;
-      const y = target.getBoundingClientRect().top + window.pageYOffset - offset;
-      window.scrollTo({ top: y, behavior: "smooth" });
+  document
+    .querySelectorAll('a[href^="#"]')
+    .forEach((link) => {
+
+      link.addEventListener(
+        "click",
+        (event) => {
+
+          const href =
+            link.getAttribute("href");
+
+          if (
+            !href ||
+            href === "#"
+          ) {
+            return;
+          }
+
+          const target =
+            document.querySelector(href);
+
+          if (!target) {
+            return;
+          }
+
+          event.preventDefault();
+
+          const offset = 80;
+
+          const y =
+            target.getBoundingClientRect().top +
+            window.pageYOffset -
+            offset;
+
+          window.scrollTo({
+            top: y,
+            behavior: "smooth"
+          });
+
+        }
+      );
+
     });
-  });
 
-  // ===== 5) Typed text effect (safe) =====
+
+  /* ================= TYPED TEXT ================= */
+
   if (typedTextEl) {
+
     const phrases = [
-      "IT Undergraduate",
+
+      "IT Undergraduate at SLIIT",
+
       "Aspiring Software Developer",
+
+      "Full-Stack Developer",
+
       "DevOps Enthusiast",
-      "Full‑Stack & Web Applications",
+
+      "Cloud Technology Enthusiast"
+
     ];
 
-    let p = 0;
-    let i = 0;
+    let phraseIndex = 0;
+
+    let charIndex = 0;
+
     let deleting = false;
 
-    function tick() {
-      const text = phrases[p];
+
+    function typeEffect() {
+
+      const currentPhrase =
+        phrases[phraseIndex];
+
 
       if (!deleting) {
-        i++;
-        typedTextEl.textContent = text.slice(0, i);
-        if (i === text.length) {
+
+        charIndex++;
+
+        typedTextEl.textContent =
+          currentPhrase.substring(
+            0,
+            charIndex
+          );
+
+
+        if (
+          charIndex ===
+          currentPhrase.length
+        ) {
+
           deleting = true;
-          setTimeout(tick, 1200);
+
+          setTimeout(
+            typeEffect,
+            1400
+          );
+
           return;
+
         }
+
       } else {
-        i--;
-        typedTextEl.textContent = text.slice(0, i);
-        if (i === 0) {
+
+        charIndex--;
+
+        typedTextEl.textContent =
+          currentPhrase.substring(
+            0,
+            charIndex
+          );
+
+
+        if (charIndex === 0) {
+
           deleting = false;
-          p = (p + 1) % phrases.length;
+
+          phraseIndex =
+            (phraseIndex + 1) %
+            phrases.length;
+
         }
+
       }
 
-      const delay = deleting ? 35 : 70;
-      setTimeout(tick, delay);
+
+      const speed =
+        deleting
+          ? 40
+          : 80;
+
+      setTimeout(
+        typeEffect,
+        speed
+      );
+
     }
 
-    setTimeout(tick, 600);
+
+    setTimeout(
+      typeEffect,
+      700
+    );
+
   }
 
-  // ===== 6) Scroll reveal =====
-  const revealEls = document.querySelectorAll(".fade-up, .fade-left, .fade-right");
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
+
+  /* ================= SCROLL REVEAL ================= */
+
+  const revealElements =
+    document.querySelectorAll(
+      ".fade-up, .fade-left, .fade-right"
+    );
+
+
+  if (
+    "IntersectionObserver" in window
+  ) {
+
+    const observer =
+      new IntersectionObserver(
+        (entries) => {
+
+          entries.forEach(
+            (entry) => {
+
+              if (
+                entry.isIntersecting
+              ) {
+
+                entry.target.classList.add(
+                  "visible"
+                );
+
+                observer.unobserve(
+                  entry.target
+                );
+
+              }
+
+            }
+          );
+
+        },
+        {
+          threshold: 0.12,
+
+          rootMargin:
+            "0px 0px -60px 0px"
         }
-      });
-    },
-    { threshold: 0.12, rootMargin: "0px 0px -60px 0px" }
-  );
+      );
 
-  revealEls.forEach((el) => observer.observe(el));
 
-  // ===== 7) Contact form -> mailto =====
-  const form = document.getElementById("contact-form");
-  const messageBox = document.getElementById("form-message");
+    revealElements.forEach(
+      (element) => {
 
-  function showMessage(text, type) {
-    if (!messageBox) return;
-    messageBox.textContent = text;
-    messageBox.className = `form-message ${type}`;
-    setTimeout(() => {
-      messageBox.className = "form-message";
-      messageBox.style.display = "none";
-    }, 5000);
-    messageBox.style.display = "block";
+        observer.observe(element);
+
+      }
+    );
+
+  } else {
+
+    revealElements.forEach(
+      (element) => {
+
+        element.classList.add(
+          "visible"
+        );
+
+      }
+    );
+
   }
+
+
+  /* ================= CONTACT FORM ================= */
+
+  function showMessage(
+    text,
+    type
+  ) {
+
+    if (!messageBox) {
+      return;
+    }
+
+    messageBox.textContent = text;
+
+    messageBox.className =
+      `form-message ${type}`;
+
+    messageBox.style.display =
+      "block";
+
+
+    setTimeout(() => {
+
+      messageBox.className =
+        "form-message";
+
+      messageBox.style.display =
+        "none";
+
+    }, 5000);
+
+  }
+
 
   if (form) {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
 
-      const name = document.getElementById("name")?.value.trim();
-      const email = document.getElementById("email")?.value.trim();
-      const subject = document.getElementById("subject")?.value.trim() || "Portfolio Contact";
-      const msg = document.getElementById("message")?.value.trim();
+    form.addEventListener(
+      "submit",
+      (event) => {
 
-      if (!name || !email || !msg) {
-        showMessage("Please fill in all required fields.", "error");
-        return;
+        event.preventDefault();
+
+
+        const name =
+          document
+            .getElementById("name")
+            ?.value
+            .trim();
+
+
+        const email =
+          document
+            .getElementById("email")
+            ?.value
+            .trim();
+
+
+        const subject =
+          document
+            .getElementById("subject")
+            ?.value
+            .trim() ||
+          "Portfolio Contact";
+
+
+        const message =
+          document
+            .getElementById("message")
+            ?.value
+            .trim();
+
+
+        if (
+          !name ||
+          !email ||
+          !message
+        ) {
+
+          showMessage(
+            "Please fill in all required fields.",
+            "error"
+          );
+
+          return;
+
+        }
+
+
+        const emailValid =
+          /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+            .test(email);
+
+
+        if (!emailValid) {
+
+          showMessage(
+            "Please enter a valid email address.",
+            "error"
+          );
+
+          return;
+
+        }
+
+
+        const body =
+          `Name: ${name}\n` +
+          `Email: ${email}\n\n` +
+          `${message}`;
+
+
+        const mailto =
+          `mailto:withanagevidhu@gmail.com` +
+          `?subject=${encodeURIComponent(subject)}` +
+          `&body=${encodeURIComponent(body)}`;
+
+
+        showMessage(
+          "Opening your email application...",
+          "success"
+        );
+
+
+        window.location.href =
+          mailto;
+
+
+        form.reset();
+
       }
+    );
 
-      const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-      if (!emailOk) {
-        showMessage("Please enter a valid email address.", "error");
-        return;
-      }
-
-      const body =
-        `Name: ${name}%0D%0A` +
-        `Email: ${email}%0D%0A%0D%0A` +
-        `${encodeURIComponent(msg)}`;
-
-      const mailto = `mailto:withanagevidhu@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
-      window.location.href = mailto;
-
-      showMessage("Opening your email app…", "success");
-      form.reset();
-    });
   }
 
-  // ===== 8) Back to top + year =====
+
+  /* ================= BACK TO TOP ================= */
+
   function updateBackToTop() {
-    if (!backToTopBtn) return;
-    if (window.scrollY > 450) backToTopBtn.classList.add("visible");
-    else backToTopBtn.classList.remove("visible");
+
+    if (!backToTopBtn) {
+      return;
+    }
+
+    if (window.scrollY > 450) {
+
+      backToTopBtn.classList.add(
+        "visible"
+      );
+
+    } else {
+
+      backToTopBtn.classList.remove(
+        "visible"
+      );
+
+    }
+
   }
+
 
   if (backToTopBtn) {
-    backToTopBtn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
+
+    backToTopBtn.addEventListener(
+      "click",
+      () => {
+
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+
+      }
+    );
+
   }
 
-  const yearEl = document.getElementById("year");
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* ================= CURRENT YEAR ================= */
+
+  if (yearEl) {
+
+    yearEl.textContent =
+      new Date().getFullYear();
+
+  }
+
 });
