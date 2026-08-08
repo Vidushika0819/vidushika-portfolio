@@ -1,8 +1,0 @@
-/*
-  script.js
-
-  All portfolio JavaScript functionality
-  is handled by main.js.
-
-  This file is intentionally unused.
-*/
